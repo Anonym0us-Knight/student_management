@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 //In order to allow any numbers of records to be added, I will try to use a linked list
 struct student{
     int id;
@@ -16,6 +17,14 @@ void searchid();
 void deleteid();
 void addnew();
 void deleteall();
+
+void clearConsole() {
+    #ifdef _WIN32
+        system("cls"); // Windows command to clear console
+    #else
+        system("clear"); // Linux/macOS command to clear console
+    #endif
+}
 
 int main(){
     int t = 1;
