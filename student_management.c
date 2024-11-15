@@ -12,6 +12,9 @@ struct student{
 
 struct student *head = NULL;
 
+char *buffer = NULL; // Buffer to store the line
+size_t len = 0;      // Initial buffer size
+
 void showall();
 void searchid();
 void deleteid();
@@ -91,7 +94,7 @@ void showall(){
     }
     char key;
     printf("\nPress any key to continue\n");
-    getchar();
+    getline(&buffer, &len, stdin);
     scanf("%c",&key);
     clearConsole();
     
@@ -128,7 +131,7 @@ void searchid(){
     }
     char key;
     printf("\nPress any key to continue\n");
-    getchar();
+    getline(&buffer, &len, stdin);
     scanf("%c",&key);
     clearConsole();
     
@@ -162,7 +165,7 @@ void deleteid(){
     }
     char key;
     printf("\nPress any key to continue\n");
-    getchar();
+    getline(&buffer, &len, stdin);
     scanf("%c",&key);
     clearConsole();
     
@@ -187,7 +190,7 @@ void addnew(){
         scanf("%s",ptr->name);
         printf("\nEnter Age: ");
         scanf("%d",&ptr->age);
-        getchar();
+        getline();
         printf("\nEnter Grade: ");
         scanf("%c",&ptr->grade);
         ptr->next = NULL;
@@ -220,7 +223,7 @@ void addnew(){
     }
     char key;
     printf("\nPress any key to continue\n");
-    getchar();
+    getline(&buffer, &len, stdin);
     scanf("%c",&key);
     clearConsole();
     
@@ -251,7 +254,7 @@ void deleteall(){
     }
     char key;
     printf("\nPress any key to continue\n");
-    getchar();
+    getline(&buffer, &len, stdin);
     scanf("%c",&key);
     clearConsole();
     
