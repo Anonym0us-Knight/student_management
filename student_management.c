@@ -182,7 +182,7 @@ void addnew(){
         printf("\nEnter Name: ");
         scanf("%s",&ptr->name);
         printf("\nEnter Age: ");
-        scanf("%s",&ptr->age);
+        scanf("%d",&ptr->age);
         printf("\nEnter Grade: ");
         scanf("%c",&ptr->grade);
         ptr->next = NULL;
@@ -198,7 +198,7 @@ void addnew(){
                 printf("\nEnter Name: ");
                 scanf("%s",&ptr->name);
                 printf("\nEnter Age: ");
-                scanf("%s",&ptr->age);
+                scanf("%d",&ptr->age);
                 printf("\nEnter Grade: ");
                 scanf("%c",&ptr->grade);
                 
