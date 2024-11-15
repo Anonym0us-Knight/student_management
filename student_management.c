@@ -84,13 +84,15 @@ void showall(){
             printf("Student Age: %d",ptr->age);
             printf("Student Grade: %c",ptr->grade);
             printf("\n********************\n");
+            ptr = ptr -> next;
         }
-        char key;
-        printf("\nPress any key to continue\n");
-        scanf("%c",&key);
-        clearConsole();
+        
         
     }
+    char key;
+    printf("\nPress any key to continue\n");
+    scanf("%c",&key);
+    clearConsole();
     
 }
 
@@ -117,13 +119,133 @@ void searchid(){
                 printf("\n********************\n");
                 break;
             }
+            ptr = ptr -> next;
             
         }
-        char key;
-        printf("\nPress any key to continue\n");
-        scanf("%c",&key);
-        clearConsole();
+        
         
     }
+    char key;
+    printf("\nPress any key to continue\n");
+    scanf("%c",&key);
+    clearConsole();
+    
+}
+
+void deleteid(){
+    struct student *ptr;
+    struct student *prev_ptr;
+    ptr = head;
+    if (ptr==NULL)
+    {
+        printf("\nEmpty Database\n");
+    } else {
+        while (ptr!=NULL)
+        {
+            printf("\nEnter the id of student to be Deleted: ");
+            int target;
+            scanf("%d",&target);
+            if (ptr -> id == target)
+            {
+                prev_ptr -> next = ptr -> next;
+                free(ptr);
+                break;
+            } else {
+                ptr = ptr -> next;
+            }
+            
+        }
+        
+        
+    }
+    char key;
+    printf("\nPress any key to continue\n");
+    scanf("%c",&key);
+    clearConsole();
+    
+}
+
+
+void addnew(){
+    struct student *ptr;
+    struct student *iterator;
+    iterator = head;
+    ptr = (struct student *) malloc(sizeof(struct student));
+
+    
+    
+    if (head==NULL)
+    {
+        head -> next = ptr;
+        printf("\nEnter ID: ");
+        scanf("%d",ptr->id);
+        printf("\nEnter Name: ");
+        scanf("%s",ptr->name);
+        printf("\nEnter Age: ");
+        scanf("%s",ptr->age);
+        printf("\nEnter Grade: ");
+        scanf("%c",ptr->grade);
+        ptr->next = NULL;
+    }else{
+        while (1)
+        {
+            if (iterator->next==NULL)
+            {
+                iterator -> next = ptr;
+                
+                printf("\nEnter ID: ");
+                scanf("%d",ptr->id);
+                printf("\nEnter Name: ");
+                scanf("%s",ptr->name);
+                printf("\nEnter Age: ");
+                scanf("%s",ptr->age);
+                printf("\nEnter Grade: ");
+                scanf("%c",ptr->grade);
+                
+                ptr->next = NULL;
+                break;
+
+            } else {
+                iterator = iterator -> next;
+            }
+            
+            
+        }
+        
+    }
+    char key;
+    printf("\nPress any key to continue\n");
+    scanf("%c",&key);
+    clearConsole();
+    
+}
+
+
+
+void deleteall(){
+    struct student *ptr;
+    struct student *delete;
+    ptr = head;
+    if (ptr==NULL)
+    {
+        printf("\nDatabase Clear\n");
+    } else {
+        while (ptr->next!=NULL)
+        {
+            delete = ptr;
+            ptr = ptr->next;
+            free(delete);
+            
+        }
+        free(ptr);
+        head = NULL;
+        printf("\nDatabase Cleared\n");
+        
+
+    }
+    char key;
+    printf("\nPress any key to continue\n");
+    scanf("%c",&key);
+    clearConsole();
     
 }
