@@ -178,13 +178,13 @@ void addnew(){
     {
         head -> next = ptr;
         printf("\nEnter ID: ");
-        scanf("%d",ptr->id);
+        scanf("%d",&ptr->id);
         printf("\nEnter Name: ");
-        scanf("%s",ptr->name);
+        scanf("%s",&ptr->name);
         printf("\nEnter Age: ");
-        scanf("%s",ptr->age);
+        scanf("%s",&ptr->age);
         printf("\nEnter Grade: ");
-        scanf("%c",ptr->grade);
+        scanf("%c",&ptr->grade);
         ptr->next = NULL;
     }else{
         while (1)
@@ -194,13 +194,13 @@ void addnew(){
                 iterator -> next = ptr;
                 
                 printf("\nEnter ID: ");
-                scanf("%d",ptr->id);
+                scanf("%d",&ptr->id);
                 printf("\nEnter Name: ");
-                scanf("%s",ptr->name);
+                scanf("%s",&ptr->name);
                 printf("\nEnter Age: ");
-                scanf("%s",ptr->age);
+                scanf("%s",&ptr->age);
                 printf("\nEnter Grade: ");
-                scanf("%c",ptr->grade);
+                scanf("%c",&ptr->grade);
                 
                 ptr->next = NULL;
                 break;
