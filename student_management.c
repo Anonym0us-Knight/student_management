@@ -180,7 +180,7 @@ void addnew(){
         printf("\nEnter ID: ");
         scanf("%d",&ptr->id);
         printf("\nEnter Name: ");
-        scanf("%s",&ptr->name);
+        scanf("%s",ptr->name);
         printf("\nEnter Age: ");
         scanf("%d",&ptr->age);
         printf("\nEnter Grade: ");
@@ -196,7 +196,7 @@ void addnew(){
                 printf("\nEnter ID: ");
                 scanf("%d",&ptr->id);
                 printf("\nEnter Name: ");
-                scanf("%s",&ptr->name);
+                scanf("%s",ptr->name);
                 printf("\nEnter Age: ");
                 scanf("%d",&ptr->age);
                 printf("\nEnter Grade: ");
