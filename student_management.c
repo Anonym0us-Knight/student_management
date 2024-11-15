@@ -95,3 +95,35 @@ void showall(){
 }
 
 
+void searchid(){
+    struct student *ptr;
+    ptr = head;
+    if (ptr==NULL)
+    {
+        printf("\nEmpty Database\n");
+    } else {
+        int target;
+        printf("Enter the ID of the target student: ");
+        scanf("%d",&target);
+        while (ptr!=NULL)
+        {
+            if (ptr->id==target)
+            {
+                printf("\n********************\n");
+                printf("Student Id: %d",ptr->id);
+                printf("Student Name: %s",ptr->name);
+                printf("Student Age: %d",ptr->age);
+                printf("Student Grade: %c",ptr->grade);
+                printf("\n********************\n");
+                break;
+            }
+            
+        }
+        char key;
+        printf("\nPress any key to continue\n");
+        scanf("%c",&key);
+        clearConsole();
+        
+    }
+    
+}
