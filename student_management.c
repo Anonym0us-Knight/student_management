@@ -85,7 +85,13 @@ void showall(){
             printf("Student Grade: %c",ptr->grade);
             printf("\n********************\n");
         }
+        char key;
+        printf("\nPress any key to continue\n");
+        scanf("%c",&key);
+        clearConsole();
         
     }
     
 }
+
+
