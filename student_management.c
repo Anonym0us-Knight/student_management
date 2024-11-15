@@ -79,10 +79,10 @@ void showall(){
         while (ptr!=NULL)
         {
             printf("\n********************\n");
-            printf("Student Id: %d",ptr->id);
-            printf("Student Name: %s",ptr->name);
-            printf("Student Age: %d",ptr->age);
-            printf("Student Grade: %c",ptr->grade);
+            printf("Student Id: %d\n",ptr->id);
+            printf("Student Name: %s\n",ptr->name);
+            printf("Student Age: %d\n",ptr->age);
+            printf("Student Grade: %c\n",ptr->grade);
             printf("\n********************\n");
             ptr = ptr -> next;
         }
@@ -91,6 +91,7 @@ void showall(){
     }
     char key;
     printf("\nPress any key to continue\n");
+    getchar();
     scanf("%c",&key);
     clearConsole();
     
@@ -127,6 +128,7 @@ void searchid(){
     }
     char key;
     printf("\nPress any key to continue\n");
+    getchar();
     scanf("%c",&key);
     clearConsole();
     
@@ -160,6 +162,7 @@ void deleteid(){
     }
     char key;
     printf("\nPress any key to continue\n");
+    getchar();
     scanf("%c",&key);
     clearConsole();
     
@@ -176,13 +179,15 @@ void addnew(){
     
     if (head==NULL)
     {
-        head -> next = ptr;
+        //head -> next = ptr; // This causes segmentation fault, because we are trying to access NULL 
+        head = ptr;
         printf("\nEnter ID: ");
         scanf("%d",&ptr->id);
         printf("\nEnter Name: ");
         scanf("%s",ptr->name);
         printf("\nEnter Age: ");
         scanf("%d",&ptr->age);
+        getchar();
         printf("\nEnter Grade: ");
         scanf("%c",&ptr->grade);
         ptr->next = NULL;
@@ -215,6 +220,7 @@ void addnew(){
     }
     char key;
     printf("\nPress any key to continue\n");
+    getchar();
     scanf("%c",&key);
     clearConsole();
     
@@ -245,6 +251,7 @@ void deleteall(){
     }
     char key;
     printf("\nPress any key to continue\n");
+    getchar();
     scanf("%c",&key);
     clearConsole();
     
