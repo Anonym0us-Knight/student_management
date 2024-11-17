@@ -12,14 +12,21 @@ struct student{
 
 struct student *head = NULL;
 
-char *buffer = NULL; // Buffer to store the line
-size_t len = 0;      // Initial buffer size
+
 
 void showall();
 void searchid();
 void deleteid();
 void addnew();
 void deleteall();
+
+void clearBuffer() {
+    while (getchar()!='\n')
+    {
+        
+    }
+    
+}
 
 void clearConsole() {
     #ifdef _WIN32
@@ -92,10 +99,10 @@ void showall(){
         
         
     }
-    char key;
-    printf("\nPress any key to continue\n");
-    getline(&buffer, &len, stdin);
-    scanf("%c",&key);
+    
+    printf("\nPress Enter to continue\n");
+    clearBuffer();
+    getchar();
     clearConsole();
     
 }
@@ -129,10 +136,10 @@ void searchid(){
         
         
     }
-    char key;
-    printf("\nPress any key to continue\n");
-    getline(&buffer, &len, stdin);
-    scanf("%c",&key);
+    
+    printf("\nPress Enter to continue\n");
+    clearBuffer();
+    getchar();
     clearConsole();
     
 }
@@ -163,10 +170,9 @@ void deleteid(){
         
         
     }
-    char key;
-    printf("\nPress any key to continue\n");
-    getline(&buffer, &len, stdin);
-    scanf("%c",&key);
+    printf("\nPress Enter to continue\n");
+    clearBuffer();
+    getchar();
     clearConsole();
     
 }
@@ -221,10 +227,9 @@ void addnew(){
         }
         
     }
-    char key;
-    printf("\nPress any key to continue\n");
-    getline(&buffer, &len, stdin);
-    scanf("%c",&key);
+    printf("\nPress Enter to continue\n");
+    clearBuffer();
+    getchar();
     clearConsole();
     
 }
@@ -252,10 +257,9 @@ void deleteall(){
         
 
     }
-    char key;
-    printf("\nPress any key to continue\n");
-    getline(&buffer, &len, stdin);
-    scanf("%c",&key);
+    printf("\nPress Enter to continue\n");
+    clearBuffer();
+    getchar();
     clearConsole();
     
 }
