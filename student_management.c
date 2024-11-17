@@ -192,11 +192,13 @@ void addnew(){
         head = ptr;
         printf("\nEnter ID: ");
         scanf("%d",&ptr->id);
+        clearBuffer();
         printf("\nEnter Name: ");
-        scanf("%s",ptr->name);
+        fgets(ptr->name,1000,stdin); //We will use this to get the whole line as input
         printf("\nEnter Age: ");
+        clearBuffer();
         scanf("%d",&ptr->age);
-        getline();
+        clearBuffer();
         printf("\nEnter Grade: ");
         scanf("%c",&ptr->grade);
         ptr->next = NULL;
