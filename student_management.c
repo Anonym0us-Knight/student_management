@@ -195,8 +195,9 @@ void addnew(){
         clearBuffer();
         printf("\nEnter Name: ");
         fgets(ptr->name,1000,stdin); //We will use this to get the whole line as input
+        //clearBuffer();
         printf("\nEnter Age: ");
-        clearBuffer();
+        
         scanf("%d",&ptr->age);
         clearBuffer();
         printf("\nEnter Grade: ");
@@ -211,10 +212,14 @@ void addnew(){
                 
                 printf("\nEnter ID: ");
                 scanf("%d",&ptr->id);
+                clearBuffer();
                 printf("\nEnter Name: ");
-                scanf("%s",ptr->name);
+                fgets(ptr->name,1000,stdin); //We will use this to get the whole line as input
+                //clearBuffer();
                 printf("\nEnter Age: ");
+        
                 scanf("%d",&ptr->age);
+                clearBuffer();
                 printf("\nEnter Grade: ");
                 scanf("%c",&ptr->grade);
                 
