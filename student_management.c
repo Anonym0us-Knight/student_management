@@ -148,10 +148,14 @@ void deleteid(){
     struct student *ptr;
     struct student *prev_ptr;
     ptr = head;
+    prev_ptr = ptr;
     if (ptr==NULL)
     {
         printf("\nEmpty Database\n");
     } else {
+        printf("\nEnter the id of student to be Deleted: ");
+        int target;
+        scanf("%d",&target);
         while (ptr!=NULL)
         {
             printf("\nEnter the id of student to be Deleted: ");
@@ -163,6 +167,8 @@ void deleteid(){
                 free(ptr);
                 break;
             } else {
+                
+                prev_ptr = ptr;
                 ptr = ptr -> next;
             }
             
