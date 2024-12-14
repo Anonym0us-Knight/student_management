@@ -123,9 +123,9 @@ void searchid(){
             if (ptr->id==target)
             {
                 printf("\n********************\n");
-                printf("Student Id: %d",ptr->id);
-                printf("Student Name: %s",ptr->name);
-                printf("Student Age: %d",ptr->age);
+                printf("Student Id: %d\n",ptr->id);
+                printf("Student Name: %s\n",ptr->name);
+                printf("Student Age: %d\n",ptr->age);
                 printf("Student Grade: %c",ptr->grade);
                 printf("\n********************\n");
                 break;
@@ -277,4 +277,3 @@ void deleteall(){
     
 }
 
-//This is just to demonstrate git
